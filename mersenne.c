@@ -4,7 +4,7 @@
 # include <math.h>
 
 
-void GenAllPrim(int n1, bool prarr1[])
+void Generate(int n1, bool prarr1[])
 {
     for (int i=0; i<=n1; i++)
         prarr1[i] = true;
@@ -21,7 +21,7 @@ void GenAllPrim(int n1, bool prarr1[])
 void chkMerPrime(int nm)
 {
     bool prarr1[nm+1];
-    GenAllPrim(nm,prarr1);
+    Generate(nm,prarr1);
     for (int j=2; ((1<<j)-1) <= nm; j++)
     {
         long long num = (1<<j) - 1;
